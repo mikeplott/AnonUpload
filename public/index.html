@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AjaxChat</title>
+    <title>AnonUpload</title>
 </head>
 <body>
 
-<input type="text" placeholder="Enter message" id="text"/>
-<input type="text" placeholder="Enter your name" id="author"/>
-<button onclick="addMessage()">Submit</button>
+<form action="/upload" enctype="multipart/form-data" method="post">
+    <input type="file" name="file"/>
+    <button type="submit">Upload</button>
+</form>
 
-<div id="messages"></div>
-<script src="jquery-3.1.1.js"></script>
+<div id="files"></div>
+
+<script src="jquery-3.1.1.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
